@@ -1,0 +1,40 @@
+
+@columns: 12;
+@max-width: 64em;
+@spacing: 0.5%;
+
+*,
+*:after,
+*:before {
+  /* Removes padding behavior on widths */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {overflow-y: scroll;}
+
+/* */
+
+.column(@col) {
+	float: left;
+	width: (100 / @columns) * @col * 1% - @spacing;
+	margin-left: @spacing / 2;
+	margin-right: @spacing / 2;
+}
+
+/* Pre Cleared and Cool Way */
+
+header:after, main:after, footer:after, nav:after, div:after, ul:after, li:after {
+	
+	content: "";
+	display: block;
+	clear:both;
+
+}
+
+/* The Lazy Way */
+
+.clear {
+	clear:both;
+}

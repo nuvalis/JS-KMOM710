@@ -1,0 +1,11 @@
+{
+    "name": "nuvalis/GMAQ",    
+    "description": "KMOM710",
+
+    "require": {
+        "php": ">=5.5",
+        "nuvalis/mzflash": "~1.0.0",
+        "mos/cdatabase": "dev-master",
+        "mos/cform": "2.*@dev",
+    }
+}

@@ -1,0 +1,398 @@
+@import 'normalize.less';
+@import 'mixins.less';
+@import 'grid.less';
+
+// Import new stuff from here
+@import 'source.less';
+@import 'form.less';
+@import 'flash.less';
+@import 'other.less';
+@import 'mzmodal.less';
+
+@columns: 12;
+@max-width: 64em;
+@spacing: 1%;
+
+a {
+	text-decoration: none;
+	color: rgb(254, 189, 19);
+}
+
+a:hover {
+	color: #D48F22;
+}
+
+html, body {
+	min-height: 100%;
+  	height: 100%;
+	font-size: 16px;
+    font-family: "Open Sans";
+	background: #f0f0f0;
+	color: #333;
+}
+
+img {
+	max-width: 100%;
+}
+
+.me {
+	.border-radius(50%); 
+}
+
+.inner {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: @max-width;
+    font-size: 0.9em;
+}
+
+.byline {
+	margin-top: 1em;
+	.column(12);
+	border-top: solid #e2885d 1px;
+	border-bottom: solid #e2885d 1px;
+
+	img {.border-radius(50%);}
+	
+	p:first-child {.column(1)}
+	p:last-of-type {
+		font-size: 75%;
+		color: #ddd;
+		float: right;
+		.column(11);
+		padding-top: 2em;
+		padding-right: 10%;
+	}
+}
+
+.col-12 {
+	.column(12);
+}
+
+.padding {
+	padding: 1em;
+}
+
+.vertical-padding(@padding: 1em) {
+	padding-top: @padding;
+	padding-bottom: @padding;
+}
+
+
+main, footer {
+	.vertical-padding;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.featured {
+	.vertical-padding;
+}
+
+.featured article {
+	.column(4);
+	height: 10em;
+}
+
+.logo {
+	padding-right: 1em;
+	margin-top: 1em;
+	float: left;
+}
+
+.login {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+header {
+
+	background: #000;
+    border-bottom: solid 5px rgb(254, 189, 19);
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1em;
+
+	nav {
+	float: right;
+	text-decoration: none;
+
+
+		li {
+
+			display: inline;
+			float: left; 
+			margin: 0.5em;
+
+		} //Li End
+	
+	} //Nav End
+	
+} //Header End
+
+main {
+	min-height: 100%;
+	padding-bottom: 10em;
+	section.content {
+		.column(8);
+		padding-right: 2em;
+	}
+
+	aside {
+	   .column(4);
+	}
+
+}
+
+.mobile-menu-button {
+	display: none;
+	width: 100%;
+}
+
+.mobile-button {
+	display: none;
+}
+
+.menu-icon {
+	
+	@color: #FFF;
+
+	cursor: pointer;
+	position: relative;
+	float: left;
+	display: block;
+	height: 4px;
+	width: 22px;
+	margin: 4px;
+	background: @color;
+	.border-radius(3px);
+
+	&:before {
+		.border-radius(3px);
+		position: absolute;
+		content:"";
+	 	display: block;
+	  	height: 4px;
+	   	width: 22px;
+	    background: @color;
+	    margin: 4px;
+	   	left: -4px;
+	    top: 4px;
+	}
+
+	&:after {
+		.border-radius(3px);
+		position: absolute;
+		content:"";
+	 	display: block;
+	  	height: 4px;
+	   	width: 22px;
+	    background: @color;
+	    left: 0;
+	    bottom: 8px;
+	}
+
+}
+
+footer {
+	background: #000;
+    border-top: solid 5px rgb(254, 189, 19);
+	margin-top: -10em;
+	height: 10em;
+
+	section {
+	h3 {margin: 0;}
+	.column(12);
+	}
+
+}
+
+form {
+	width: 50%;
+	max-width: 50%;
+	
+}
+
+.comments {
+  color: #fff;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.comments a:hover {
+  color: #000;
+}
+
+.comments h4 {
+  font-size: 1.4em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #89330a;
+}
+
+.comment {
+  margin-top: 2em;
+  margin-bottom:  1em;
+}
+
+.comment p {
+  padding-left: 1em;
+  padding-right: 4em;
+}
+
+.comment-options{
+  padding-top: 1em;
+  border-top: 1px solid #89330a;
+}
+
+.small {
+	font-size: 75%;
+}
+
+.smaller {
+	font-size: 70%;
+}
+
+.right {float: right;}
+.left {float: left;}
+
+@media screen and (max-width: 960px) {
+
+	.inner {
+		padding: 1em;
+	}
+
+	form {width: 100%; max-width: 100%;}
+
+   .featured article, footer section, section.content,
+   section, article, aside, main aside {
+   		margin-bottom: 1em;
+   	   .column(12);
+   }
+	
+	.featured article {
+		.column(6);
+	}
+
+   .featured article:last-of-type {
+   		.column(12);
+   }
+
+   main {
+		min-height: 30em;
+
+		section.content {
+			.column(12);
+			padding: 0;
+			text-align: justify;
+		}
+
+	}
+
+	main aside {
+		.column(12);
+		text-align: center;
+	}
+
+	.byline {
+		.column(12);
+		text-align: center;
+		border: 0;
+
+		img {.border-radius(50%);}
+	
+		p:first-child {.column(12)}
+		p:last-of-type {
+			float: right;
+			.column(12);
+			padding-top: 0;
+		}
+
+	}
+
+}
+
+
+@media screen and (max-width: 760px) {
+
+   .featured article, footer section, section.content,
+   .flash, .message, section, article, aside, main aside, nav, .logo {
+   	   .column(12);
+   }
+		
+   .main-nav {
+
+   		#mobile-menu {
+   			display: none;
+   		}
+
+   		ul {
+   			padding: 0.5em;
+   		}
+
+		li {
+			margin-bottom: 0;
+			display: block;
+			float: none;
+		}
+
+		.mobile-menu-button {
+			display: block;
+		}
+
+		.mobile-button {
+			position: absolute;
+			right: 1em;
+			top: 2em;
+			display: block;
+			margin-top: .8em;
+			margin-left: 1em;
+			margin-right: 1em;
+			height: 2em;
+			padding: 4px;
+		}
+
+   }
+
+   	.byline {
+		.column(12);
+		text-align: center;
+
+		img {.border-radius(50%);}
+	
+		p:first-child {.column(12)}
+		p:last-of-type {
+			float: right;
+			.column(12);
+			padding-top: 0;
+		}
+
+	}
+
+   main {
+
+		min-height: 30em;
+
+		section.content {
+			.column(12);
+		}
+
+		aside {
+		   .column(12);
+		}
+
+	}
+
+}
+
+
+@media screen and (min-width: 760px) {
+	/* Fix for menu not disappearing when resolution change. 
+	After closed mobile-menu with JS in low-res */
+	#mobile-menu {
+		display: block !important;
+	}
+
+}
