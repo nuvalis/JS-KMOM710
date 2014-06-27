@@ -43,7 +43,7 @@ return [
         'lang' => 'sv',
 
         // Append this value to each <title>
-        'title_append' => ' | Give Me A Quest!',
+        'title_append' => ' | mzModal',
 
         // Stylesheets
         'stylesheets' => ['css/style.css'],
