@@ -10,18 +10,18 @@ Examples
 Animations
 ----------
 
-<h3><a class="top-modal"href="">Animation 1</a></h3>
-<h3><a class="bottom-modal"href="">Animation 2</a></h3>
-<h3><a class="left-modal"href="">Animation 3</a></h3>
-<h3><a class="right-modal"href="">Animation 4</a></h3>
-<h3><a class="flip-modal"href="">Animation 5</a></h3>
+<h3><a class="top-modal"href="">Top Slide Animation</a></h3>
+<h3><a class="bottom-modal"href="">Bottom Slide Animation</a></h3>
+<h3><a class="left-modal"href="">Left Slide Animation</a></h3>
+<h3><a class="right-modal"href="">Right Slide Animation</a></h3>
+<h3><a class="flip-modal"href="">3D Flip Animation</a></h3>
 
 Installation
 ===========================================
 
 Download Zip, or clone.
 
-Copy/Move the jquery.mzModal.js to your js directory ex: Anax/webroot/js
+Copy/Move the *jquery.mzModal.js* to your js directory ex: *Anax/webroot/js*
 And Copy/Move the mzTools.less/mzModal.css to your css directory. Remember to register your new files in Anax.
 
 If you want to use the modal without the ajax part it needs some configuration
@@ -56,9 +56,9 @@ JSON Installation for Anax-MVC and Usage
 
 Download Zip, or clone.
 
-Copy the JSON Directory inside AnaxModule/ to the app/src in your Anax-MVC Project
+Copy the JSON Directory inside *AnaxModule/* to the *app/src* in your Anax-MVC Project
 
-Add this to your config.
+Add this to your **config**.
     
     //Your Anax Config
     $di = new \Anax\DI\CDIFactoryDefault();
@@ -68,7 +68,7 @@ Add this to your config.
     });
     $app = new \Anax\Kernel\CAnax($di);
 
-Use it like this in your Anax Controller.
+Use it like this in your **Anax Controller**.
 
     //Your Controller
     public function getFormDataFromIdAction($id, $json = null) {
