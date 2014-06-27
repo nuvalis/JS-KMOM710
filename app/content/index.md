@@ -21,8 +21,10 @@ Installation
 
 Download Zip, or clone.
 
-Copy/Move the *jquery.mzModal.js* to your js directory ex: *Anax/webroot/js*
-And Copy/Move the mzTools.less/mzModal.css to your css directory. Remember to register your new files in Anax.
+Copy the *jquery.mzModal.js* to your js directory ex: *Anax/webroot/js*
+and copy the *mzTools.less/mzModal.css* to your */css* directory. 
+
+Remember to register your new files in Anax.
 
 If you want to use the modal without the ajax part it needs some configuration
 
@@ -54,9 +56,9 @@ Full set of settings
 JSON Installation for Anax-MVC and Usage
 ===========================================
 
-Download Zip, or clone.
+Download Zip, or clone with Git.
 
-Copy the JSON Directory inside *AnaxModule/* to the *app/src* in your Anax-MVC Project
+Copy the *JSON* directory inside *AnaxModule/* to the *app/src* in your Anax-MVC Project
 
 Add this to your **config**.
     
