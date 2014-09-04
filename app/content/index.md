@@ -4,7 +4,7 @@ This plugin is designed for the Anax-MVC framework and was design to solve a spe
 
 Features and Roadmap 
 =====================
-This plugin has all the basic features for modal dialogs powered by JSON/Ajax calls. Future updates may include more animations and refining existing features.
+This plugin has all the basic features for modal dialogs powered by JSON/Ajax calls. 
 
     You can do this:
     1. Retrieve HTML/Content from JSON.
@@ -15,6 +15,8 @@ This plugin has all the basic features for modal dialogs powered by JSON/Ajax ca
     1. Centered Dialogbox
     2. CSS3 Animations for smooth transistions
     3. JSON/Ajax powered content
+    
+    Future updates may include more animations and refining existing features.
     
 
 Examples
